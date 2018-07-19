@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Remédios No Canadá</string>
+    <string name="medicine_name">Nome do Remédio</string>
+    <string name="medicine_description">Descrição do Remédio</string>
+    <string name="brand_name">Nome Comercial</string>
+    <string name="clinical_use">Uso Clínico</string>
+    <string name="need_prescription">Precisa de Prescrição</string>
+    <string name="available_in_canada">Disponível no Canadá</string>
+</resources>

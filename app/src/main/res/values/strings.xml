@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">RemediosNoCanada</string>
+    <string name="app_name">Medicine in Canada</string>
+    <string name="medicine_name">Medicine Name</string>
+    <string name="medicine_description">Medicine Description</string>
+    <string name="brand_name">Brand Name</string>
+    <string name="clinical_use">Clinical Use</string>
+    <string name="need_prescription">Need Prescription</string>
+    <string name="available_in_canada">Availability in Canada</string>
 </resources>
