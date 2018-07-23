@@ -6,4 +6,5 @@
     <string name="clinical_use">Clinical Use</string>
     <string name="need_prescription">Need Prescription</string>
     <string name="available_in_canada">Availability in Canada</string>
+    <string name="action_search">Search</string>
 </resources>
