@@ -10,7 +10,7 @@ public class Medicine {
     private String clinical_use;
     private String prescription;
 
-    // constructor
+    // general constructor
     public Medicine(int id, String name_pt, String name, String brand_name_pt, String brand_name, String clinical_use_pt, String clinical_use, String prescription) {
         this.id = id;
         this.name_pt = name_pt;
@@ -22,16 +22,19 @@ public class Medicine {
         this.prescription = prescription;
     }
 
-    // general constructor
+    // constructor main page
     public Medicine(int id, String name_pt, String brand_name_pt){
         this.id = id;
         this.brand_name_pt = brand_name_pt;
         this.name_pt = name_pt;
+    }
+
+    // default constructor
+    public Medicine(){
 
     }
 
     // getters
-
     public int getId() {
         return id;
     }
@@ -62,5 +65,10 @@ public class Medicine {
 
     public String getPrescription() {
         return prescription;
+    }
+
+    @Override
+    public String toString() {
+        return  name_pt;
     }
 }
