@@ -40,12 +40,13 @@ public class DetailsActivity extends AppCompatActivity{
         TextView need_prescription_pt_TV = findViewById(R.id.need_prescription_pt_TV);
         need_prescription_pt_TV.setText(medicine.getPrescription());
 
+        //prescription drug (CA)
+
     }
 
+    // default constructor
     public DetailsActivity() {
     }
 
-    public DetailsActivity(Medicine medicine) {
-        this.medicine = medicine;
-    }
+
 }

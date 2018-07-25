@@ -10,7 +10,7 @@ public class Medicine {
     private String clinical_use;
     private String prescription;
 
-    // general constructor
+    // detail constructor
     public Medicine(int id, String name_pt, String name, String brand_name_pt, String brand_name, String clinical_use_pt, String clinical_use, String prescription) {
         this.id = id;
         this.name_pt = name_pt;

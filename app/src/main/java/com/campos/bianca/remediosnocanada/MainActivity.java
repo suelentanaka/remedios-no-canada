@@ -19,15 +19,12 @@ public class MainActivity extends AppCompatActivity {
     private Context mContext;
     private ArrayList<Medicine> mMedicine;
     private ArrayAdapter<Medicine> mArrayAdapter;
-//    public static final String MEDICINE = "medicine_name";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // TODO Incluir favorite button
-//        ImageButton imgButton = (ImageButton) findViewById(R.id.favoriteButton);
         mContext = this;
 
         DataBaseAdapter mDbHelper = new DataBaseAdapter(this);
@@ -69,12 +66,12 @@ public class MainActivity extends AppCompatActivity {
             //TODO searchview
             @Override
             public boolean onQueryTextChange(String newText) {
-//                if (TextUtils.isEmpty(newText)) {
-//                    listView.clearTextFilter();
-//                } else {
-//                    listView.setFilterText(newText);
-//
-//                }
+                if (TextUtils.isEmpty(newText)) {
+                    listView.clearTextFilter();
+                } else {
+                    listView.setFilterText(newText);
+
+                }
                 return true;
             }
         });

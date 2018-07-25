@@ -14,10 +14,10 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class TextviewAdapter extends ArrayAdapter<Medicine>{
     private int layoutResource;
-    public Context context;
     public ArrayList<Medicine> medicineArrayList;
     public ArrayList<Medicine> orig;
     public static final int MEDICINE = 0;
@@ -27,37 +27,12 @@ public class TextviewAdapter extends ArrayAdapter<Medicine>{
         this.layoutResource = layoutResource;
     }
 
-    public Filter getFilter() {
-        return new Filter() {
 
-            @Override
-            protected FilterResults performFiltering(CharSequence constraint) {
-                final FilterResults oReturn = new FilterResults();
-                final ArrayList<Medicine> results = new ArrayList<Medicine>();
-                if (orig == null)
-                    orig = medicineArrayList;
-                if (constraint != null) {
-                    if (orig != null && orig.size() > 0) {
-                        for (final Medicine g : orig) {
-                            if (g.getName().toLowerCase()
-                                    .contains(constraint.toString()))
-                                results.add(g);
-                        }
-                    }
-                    oReturn.values = results;
-                }
-                return oReturn;
-            }
-
-            @SuppressWarnings("unchecked")
-            @Override
-            protected void publishResults(CharSequence constraint,
-                                          FilterResults results) {
-                medicineArrayList = (ArrayList<Medicine>) results.values;
-                notifyDataSetChanged();
-            }
-        };
+    // search
+    public void notifyDataSetChanged() {
+        super.notifyDataSetChanged();
     }
+
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
