@@ -13,6 +13,7 @@ public class DataBaseAdapter {
     private final Context mContext;
     private SQLiteDatabase mDb;
     private DataBaseHelper mDbHelper;
+    private Medicine medicineData;
 
     public DataBaseAdapter(Context context) {
         this.mContext = context;
@@ -53,7 +54,7 @@ public class DataBaseAdapter {
 
 
     public ArrayList<Medicine> getMainPage() {
-            String query = "SELECT _id, name_pt, brand_name_pt FROM medicine";
+            String query = "SELECT _id, name_pt, brand_name_pt FROM medicine ORDER BY name_pt ASC";
             ArrayList<Medicine> medicineList = new ArrayList<>();
             try {
                 this.open();
@@ -77,15 +78,15 @@ public class DataBaseAdapter {
             return medicineList;
     }
 
-    public ArrayList<Medicine> getDetailPage() {
-        String query = "SELECT _id, name_pt, name, brand_name_pt, brand_name, clinical_use_pt, clinical_use, prescription FROM medicine WHERE id = ?";
+    public Medicine getDetailPage(int id) {
+        String query = "SELECT _id, name_pt, name, brand_name_pt, brand_name, clinical_use_pt, clinical_use, prescription FROM medicine WHERE _id = ?";
         ArrayList<Medicine> medicineList = new ArrayList<>();
         try {
             this.open();
-            Cursor mCur = mDb.rawQuery(query, null);
+            Cursor mCur = mDb.rawQuery(query, new String[]{String.valueOf(id)});
             if (mCur!=null){
                 while (mCur.moveToNext()){
-                    Medicine std = new Medicine(
+                    medicineData = new Medicine(
                             mCur.getInt(0),
                             mCur.getString(1),
                             mCur.getString(2),
@@ -94,7 +95,6 @@ public class DataBaseAdapter {
                             mCur.getString(5),
                             mCur.getString(6),
                             mCur.getString(7));
-                    medicineList.add(std);
                 }
             }
 
@@ -104,7 +104,7 @@ public class DataBaseAdapter {
         }finally {
             this.close();
         }
-        return medicineList;
+        return medicineData;
     }
 
 

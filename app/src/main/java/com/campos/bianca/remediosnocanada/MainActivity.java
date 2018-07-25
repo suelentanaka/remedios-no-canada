@@ -15,17 +15,19 @@ import android.support.v7.widget.SearchView;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    ListView listView;
+    private ListView listView;
     private Context mContext;
     private ArrayList<Medicine> mMedicine;
     private ArrayAdapter<Medicine> mArrayAdapter;
+//    public static final String MEDICINE = "medicine_name";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        listView = (ListView) findViewById(R.id.medicine_LV);
-        ImageButton imgButton = (ImageButton) findViewById(R.id.favoriteButton);
+        // TODO Incluir favorite button
+//        ImageButton imgButton = (ImageButton) findViewById(R.id.favoriteButton);
         mContext = this;
 
         DataBaseAdapter mDbHelper = new DataBaseAdapter(this);
@@ -36,10 +38,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     private void loadListView() {
         listView = findViewById(R.id.medicine_LV);
         TextviewAdapter textviewAdapter = new TextviewAdapter(this, R.layout.list_layout, mMedicine);
         listView.setAdapter(textviewAdapter);
+        listView.setTextFilterEnabled(true);
 
     }
 
@@ -48,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //search
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
@@ -60,12 +66,16 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
 
+            //TODO searchview
             @Override
             public boolean onQueryTextChange(String newText) {
-                if (TextUtils.isEmpty(newText)){
-                    listView.clearTextFilter();
-                }
-                return false;
+//                if (TextUtils.isEmpty(newText)) {
+//                    listView.clearTextFilter();
+//                } else {
+//                    listView.setFilterText(newText);
+//
+//                }
+                return true;
             }
         });
 

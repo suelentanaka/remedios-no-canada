@@ -6,4 +6,123 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:text="Nome do Remédio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/name_pt_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:text="@string/medicine_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/name_en_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:text="Nome Comercial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/brand_name_pt_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:text="@string/brand_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/brand_name_en_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:text="Uso Clínico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/clinical_use_pt_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:text="@string/clinical_use"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/clinical_use_en_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:text="Precisa de Prescrição"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/need_prescription_pt_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"/>
+
 </LinearLayout>
