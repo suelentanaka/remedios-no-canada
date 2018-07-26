@@ -58,13 +58,20 @@ public class DataBaseAdapter {
     public void updateFavorites(int id) {
 //        String query = "UPDATE medicine SET favorites = 1 WHERE _id = ?";
 //        int medicineId = id;
-        this.open();
+//        this.open();
 //        mDb.execSQL(query, new String[]{String.valueOf(id)});
-        ContentValues newValues = new ContentValues();
-        newValues.put("favorites", 1);
+        try {
+            SQLiteDatabase db = SQLiteDatabase.openDatabase("/data/data/com.campos.bianca.remediosnocanada/databases/medicine.db", null, 0);
+            ContentValues newValues = new ContentValues();
+            newValues.put("favorites", 1);
 
-        mDb.update("medicine", newValues, "_id=" + String.valueOf(id), null);
-        this.close();
+            db.update("medicine", newValues, "_id=" + String.valueOf(id), null);
+        } catch (Exception e){
+
+        }
+
+
+//        this.close();
 
     }
 
