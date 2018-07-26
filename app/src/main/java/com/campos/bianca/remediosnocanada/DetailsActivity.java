@@ -1,9 +1,15 @@
 package com.campos.bianca.remediosnocanada;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.like.LikeButton;
+import com.like.OnLikeListener;
+import com.muddzdev.styleabletoastlibrary.StyleableToast;
 
 public class DetailsActivity extends AppCompatActivity{
     Medicine medicine;
@@ -41,6 +47,23 @@ public class DetailsActivity extends AppCompatActivity{
         need_prescription_pt_TV.setText(medicine.getPrescription());
 
         //prescription drug (CA)
+
+
+        //Favorites button
+        LikeButton starButton = findViewById(R.id.star_button);
+        starButton.setOnLikeListener(new OnLikeListener() {
+            @Override
+            public void liked(LikeButton starButton) {
+                StyleableToast.makeText(DetailsActivity.this, "Added to Favorites List!", Toast.LENGTH_LONG, R.style.likeToast).show();
+                
+            }
+
+            @Override
+            public void unLiked(LikeButton starButton) {
+
+                StyleableToast.makeText(DetailsActivity.this, "Removed from Favorites List!", Toast.LENGTH_LONG, R.style.dislikeToast).show();
+            }
+        });
 
     }
 

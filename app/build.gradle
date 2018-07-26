@@ -27,5 +27,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     implementation 'com.github.jd-alexander:LikeButton:0.2.3'
-
+    implementation 'com.muddzdev:styleabletoast:2.1.2'
 }

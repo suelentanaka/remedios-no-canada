@@ -8,4 +8,32 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="likeToast">
+        <item name="textBold">true</item>
+        <item name="textColor">#fff</item>
+        <item name="textSize">17sp</item>
+        <item name="colorBackground">#999</item>
+        <item name="solidBackground">false</item>
+        <item name="strokeWidth">3dp</item>
+        <item name="strokeColor">#fff</item>
+        <item name="iconStart">@drawable/ic_favorite</item>
+        <item name="length">LONG</item> LONG or SHORT
+        <item name="gravity">center</item> top or center
+        <item name="radius">20dp</item>
+    </style>
+
+    <style name="dislikeToast">
+        <item name="textBold">true</item>
+        <item name="textColor">#fff</item>
+        <item name="textSize">17sp</item>
+        <item name="colorBackground">#999</item>
+        <item name="solidBackground">false</item>
+        <item name="strokeWidth">3dp</item>
+        <item name="strokeColor">#fff</item>
+        <item name="iconStart">@drawable/ic_favorite</item>
+        <item name="length">LONG</item> LONG or SHORT
+        <item name="gravity">center</item> top or center
+        <item name="radius">20dp</item>
+    </style>
+
 </resources>
