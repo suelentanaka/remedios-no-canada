@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,6 +15,7 @@ import com.muddzdev.styleabletoastlibrary.StyleableToast;
 public class DetailsActivity extends AppCompatActivity{
     Medicine medicine;
     DataBaseAdapter dbAdapter;
+    int medicine_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +24,7 @@ public class DetailsActivity extends AppCompatActivity{
         dbAdapter = new DataBaseAdapter(this);
 
         Intent intent = getIntent();
-        int medicine_id = intent.getIntExtra("MEDICINE", 0);
+        medicine_id = intent.getIntExtra("MEDICINE", 0);
         medicine = dbAdapter.getDetailPage(medicine_id);
 
         TextView name_pt_TV = findViewById(R.id.name_pt_TV);
@@ -55,7 +57,7 @@ public class DetailsActivity extends AppCompatActivity{
             @Override
             public void liked(LikeButton starButton) {
                 StyleableToast.makeText(DetailsActivity.this, "Added to Favorites List!", Toast.LENGTH_LONG, R.style.likeToast).show();
-                
+                dbAdapter.updateFavorites(medicine_id);
             }
 
             @Override

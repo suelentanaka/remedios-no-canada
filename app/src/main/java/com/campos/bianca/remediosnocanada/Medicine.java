@@ -1,6 +1,7 @@
 package com.campos.bianca.remediosnocanada;
 
 public class Medicine {
+    public static final int COLUMN_FAVORITES = 0;
     private int id;
     private String name_pt;
     private String name;
@@ -9,9 +10,10 @@ public class Medicine {
     private String clinical_use_pt;
     private String clinical_use;
     private String prescription;
+    private int favorites;
 
     // detail constructor
-    public Medicine(int id, String name_pt, String name, String brand_name_pt, String brand_name, String clinical_use_pt, String clinical_use, String prescription) {
+    public Medicine(int id, String name_pt, String name, String brand_name_pt, String brand_name, String clinical_use_pt, String clinical_use, String prescription, int favorites) {
         this.id = id;
         this.name_pt = name_pt;
         this.name = name;
@@ -27,6 +29,19 @@ public class Medicine {
         this.id = id;
         this.brand_name_pt = brand_name_pt;
         this.name_pt = name_pt;
+    }
+
+    // constructor favorites page
+    public Medicine(int id, String name_pt, String brand_name_pt, int favorites){
+        this.id = id;
+        this.brand_name_pt = brand_name_pt;
+        this.name_pt = name_pt;
+        this.favorites = favorites;
+    }
+
+    // constructor update favorites column
+    public Medicine(int favorites){
+        this.favorites = favorites;
     }
 
     // default constructor
