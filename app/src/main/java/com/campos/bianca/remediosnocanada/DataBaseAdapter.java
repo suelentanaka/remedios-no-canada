@@ -39,8 +39,9 @@ public class DataBaseAdapter {
         try
         {
             mDbHelper.openDataBase();
-            mDbHelper.close();
+//            mDbHelper.close();
             mDb = mDbHelper.getWritableDatabase();
+
 
         }
         catch (SQLException mSQLException)
@@ -96,7 +97,7 @@ public class DataBaseAdapter {
     }
 
     public Medicine getDetailPage(int id) {
-        String query = "SELECT _id, name_pt, name, brand_name_pt, brand_name, clinical_use_pt, clinical_use, prescription, favorites FROM medicine WHERE _id = ?";
+        String query = "SELECT _id, name_pt, name, brand_name_pt, brand_name, clinical_use_pt, clinical_use, prescription_pt, prescription, favorites FROM medicine WHERE _id = ?";
         ArrayList<Medicine> medicineList = new ArrayList<>();
         try {
             this.open();
@@ -112,7 +113,8 @@ public class DataBaseAdapter {
                             mCur.getString(5),
                             mCur.getString(6),
                             mCur.getString(7),
-                            mCur.getInt(8));
+                            mCur.getString(8),
+                            mCur.getInt(9));
                 }
             }
 

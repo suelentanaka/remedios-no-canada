@@ -3,10 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:background="#DFDFDF"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
 
     <TextView
         android:id="@+id/header_tv"
@@ -14,15 +15,23 @@
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textAlignment="center"
-        android:layout_margin="10dp"
-        android:layout_marginBottom="10dp"
-        android:textSize="35sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/custom_shape_header"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:padding="32dp"
+        android:textSize="39sp"
         android:textStyle="bold" />
 
     <ListView
         android:id="@+id/medicine_LV"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_shape_textview">
 
     </ListView>
 

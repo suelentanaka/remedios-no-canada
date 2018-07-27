@@ -9,11 +9,12 @@ public class Medicine {
     private String brand_name;
     private String clinical_use_pt;
     private String clinical_use;
+    private String prescription_pt;
     private String prescription;
     private int favorites;
 
     // detail constructor
-    public Medicine(int id, String name_pt, String name, String brand_name_pt, String brand_name, String clinical_use_pt, String clinical_use, String prescription, int favorites) {
+    public Medicine(int id, String name_pt, String name, String brand_name_pt, String brand_name, String clinical_use_pt, String clinical_use, String prescription_pt, String prescription, int favorites) {
         this.id = id;
         this.name_pt = name_pt;
         this.name = name;
@@ -21,7 +22,9 @@ public class Medicine {
         this.brand_name = brand_name;
         this.clinical_use_pt = clinical_use_pt;
         this.clinical_use = clinical_use;
+        this.prescription_pt = prescription_pt;
         this.prescription = prescription;
+        this.favorites = favorites;
     }
 
     // constructor main page
@@ -76,6 +79,10 @@ public class Medicine {
 
     public String getClinical_use() {
         return clinical_use;
+    }
+
+    public String getPrescription_pt() {
+        return prescription_pt;
     }
 
     public String getPrescription() {

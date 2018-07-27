@@ -46,9 +46,10 @@ public class DetailsActivity extends AppCompatActivity{
         clinical_use_en_TV.setText(medicine.getClinical_use());
 
         TextView need_prescription_pt_TV = findViewById(R.id.need_prescription_pt_TV);
-        need_prescription_pt_TV.setText(medicine.getPrescription());
+        need_prescription_pt_TV.setText(medicine.getPrescription_pt());
 
-        //prescription drug (CA)
+        TextView need_prescription_TV = findViewById(R.id.need_prescription_TV);
+        need_prescription_TV.setText(medicine.getPrescription());
 
 
         //Favorites button

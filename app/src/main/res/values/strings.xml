@@ -7,4 +7,5 @@
     <string name="need_prescription">Need Prescription (BR)</string>
     <string name="available_in_canada">Availability in Canada</string>
     <string name="action_search">Search</string>
+    <string name="medicine_name2">Medicine Name</string>
 </resources>

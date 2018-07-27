@@ -6,6 +6,7 @@
     android:layout_marginLeft="10dp"
     android:layout_marginTop="10dp"
     android:layout_marginBottom="10dp"
+    android:layout_marginRight="10dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -41,8 +42,7 @@
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:layout_marginTop="3dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginBottom="15dp" />
 
     <TextView
         android:text="@string/medicine_name"
@@ -57,8 +57,7 @@
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:layout_marginTop="3dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginBottom="15dp" />
 
     <TextView
         android:text="Nome Comercial"
@@ -73,8 +72,7 @@
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:layout_marginTop="3dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginBottom="15dp"/>
 
     <TextView
         android:text="@string/brand_name"
@@ -89,8 +87,7 @@
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:layout_marginTop="3dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginBottom="15dp"/>
 
     <TextView
         android:text="Uso Clínico"
@@ -105,8 +102,7 @@
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:layout_marginTop="3dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginBottom="15dp"/>
 
     <TextView
         android:text="@string/clinical_use"
@@ -121,8 +117,7 @@
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:layout_marginTop="3dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginBottom="15dp"/>
 
     <TextView
         android:text="Prescrição Obrigatória (BR)"
@@ -137,7 +132,22 @@
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:layout_marginTop="3dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:text="Prescrição Obrigatória (CA)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/need_prescription_TV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="15dp"/>
+
 
 </LinearLayout>
